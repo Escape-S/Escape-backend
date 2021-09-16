@@ -12,10 +12,10 @@ public class RoomRepository {
 
     private final EntityManager em;
 
-    public Long save(String roomName) {
+    public Long save(String name) {
 
         Room room = new Room();
-        room.setRoomName(roomName);
+        room.setName(name);
         em.persist(room);
         return room.getId();
     }
